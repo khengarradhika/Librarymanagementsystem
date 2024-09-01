@@ -19,6 +19,12 @@ class library {
         }
         book.borrowed = true;
       }
+      returnBook(isbn) {
+        const book = this.books.find(book => book.isbn === isbn && book.borrowed);
+        if (book) {
+          book.borrowed = false;
+        }
+      }
   }
   
   module.exports = library;
