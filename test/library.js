@@ -25,6 +25,9 @@ class library {
           book.borrowed = false;
         }
       }
+      getAvailableBooks() {
+        return this.books.filter(book => !book.borrowed);
+      }
   }
   
   module.exports = library;
