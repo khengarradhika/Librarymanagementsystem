@@ -1,4 +1,4 @@
-const Library = require('../library');
+const Library = require('../Library');
 
 test('should add a book to the library', () => {
   const library = new Library();
