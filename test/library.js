@@ -1,5 +1,5 @@
 
-class Library {
+class library {
     constructor() {
       this.books = [];
     }
@@ -11,7 +11,15 @@ class Library {
     getBooks() {
       return this.books;
     }
+
+    borrowBook(isbn) {
+        const book = this.books.find(book => book.isbn === isbn);
+        if (!book || book.borrowed) {
+          throw new Error('Book not available');
+        }
+        book.borrowed = true;
+      }
   }
   
-  module.exports = Library;
+  module.exports = library;
   
